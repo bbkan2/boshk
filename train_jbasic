@@ -1,0 +1,288 @@
+<!-- TUniverse Tech Company WebSite Homepage --!>
+<Html>
+<Head>
+	<Title>TUniverse Tech Company - the Clever Builder company</Title>
+	<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+    <link href="./css/default.css" type=text/css rel=stylesheet>
+</Head>
+<body bgcolor="#FFFFFF" topmargin="10" leftmargin="0" rightmargin="0" marginheight="0">
+	<Table width="800" align="center">
+		<Tr><Td class="headertxt1"><li>JBasic Training Material - Training Hours = 4 hrs</li></Td></Tr>
+		<Tr><Td>
+			<Table width="800" align="center" class="contenttxt">			
+				<Tr><Td width="100"><li class="headertxt2">簡介</li></Td><Td class="contenttxt">JBasic 為JBase 內建的程式語言，提供所有必要的程式設計功能。</td></tr>
+				<tr><td></td><td><font class="headertxt2b">編譯器為 EB.COMPILE 目錄名稱 檔案名稱</font></Td></Tr>
+				<tr><td></td><td><font class="headertxt2b">jshow -c 程式名稱</font> - 可檢查目前程式原始檔位置及是否編譯成功。</Td></Tr>
+			</Table>
+			<Table width="800" align="center" class="contenttext">			
+				<Tr valign="top" class="contenttxt"><Td><li class="headertxt2">基本程式範本</li></Td></Tr>
+				<tr valign="top">
+					<td><Table class="contenttxt">
+						<Tr><Td width="100"></Td><Td width="700"></Td></Tr>
+						<Tr><Td></Td><Td>
+							<font class="contenttxtb">程式檔案名稱必須與程式名稱相同 － 如檔案名稱為 BASIC.TEST</font>
+							<br><font class="contenttxtb">所有的程式內容必須以英文大寫字元撰寫。</font>
+							<br><font class="contenttxtb">所有程式必須依本範本撰寫。</font>
+							<br>SUBROUTINE  BASIC.TEST － 沒有輸入參數時
+							<br>SUBROUTINE  BASIC.TEST(PARAM1,PARAM2…) － 有輸入參數時
+							<br>* AUTHOR:
+							<br>* CREATE.DATE:
+							<br>* PURPOSE:
+							<br>* ARGUMENTS:
+							<br>　　$INSERT I_COMMON
+							<br>　　$INSERT I_EQUATE
+							<br>
+							<br>　　GOSUB INIT.PARAM
+							<br>　　GOSUB MAIN.PROC
+							<br>　　RETURN
+							<br>
+							<br>INIT.PARAM:  *(程式初始變數及檔案開啟區段)
+							<br>　　RETURN
+							<br>
+							<br>MAIN.PROC:   *(主要程式處理功能區段)
+							<br>　　RETURN
+							<br>END
+							<br>
+						</td></tr>
+					</table>
+				</td></tr>
+				<Tr valign="top" class="contenttxt"><Td><li class="headertxt2">程式撰寫規定</li></Td></Tr>
+				<tr valign="top">
+					<td><Table class="contenttxt">
+						<Tr><Td width="100"></Td><Td width="700"></Td></Tr>
+						<Tr><Td></Td><Td>
+							1.	變數名稱: 一律以 TU. 作為變數名稱的開頭(除以下幾種特殊變數外)
+							<br>2.	檔案名稱: 一律以 FN. 作為檔案名稱的開頭
+							<br>3.	檔案指標: 一律以 F. 作為檔案指標的開頭
+							<br>4.	檔案資料內容: 一律以 R. 作為讀取或寫入檔案資料內容變數的開頭
+					</td></tr></table>
+				</td></tr>
+				<Tr valign="top" class="contenttxt">
+					<Td><li class="headertxt2">變數型態</li></Td>
+				</Tr>
+				<tr valign="top">
+					<td><Table class="contenttxt">
+						<Tr><Td width="100"></Td><Td width="700"></Td></Tr>
+						<Tr><Td></Td><Td>
+							JBasic 程式變數型態僅有兩種。
+							<br><font class="contenttxtr">1.	通用型態 (包含文字、數字及長字串) - Dynamic Array</font>
+							<br>　　初始化方式: TU.CUST.NAME = <font class="contenttxtb">'' (請用單引號)</font>
+							<br><font class="contenttxtr">2.	固定陣列型態 (陣列型態必須先行宣告) - Dimension Array</font>
+							<br>　　DIM TU.CUST.NAME(陣列大小) 只能宣告一元陣列，<font class="contenttxtb">最大僅能使用 500</font>
+					</td></tr></table>
+				</td></tr>
+				<Tr valign="top" class="contenttxt">
+					<Td><li class="headertxt2">常用 Clause</li></Td>
+				</Tr>
+				<tr valign="top">
+					<td><Table class="contenttxt">
+						<Tr><Td width="100"></Td><Td width="700"></Td></Tr>
+						<Tr><Td></Td><Td>
+								1.	IF … THEN … END ELSE … END clause － 條件式執行區塊
+							<br>　　IF CUST.NAME EQ 'ABC'  THEN
+							<br>　　　　符合條件的程式區段
+							<br>　　END ELSE   (本段可依情形省略)
+							<br>　　　　不符合條件的程式區段
+							<br>　　END
+							<br>2.	FOR … NEXT clause －重覆執行區塊
+							<br>　　<font class="contenttxtb">CONTINUE － 跳過目前迴圈執行下一個迴圈</font>
+							<br>　　<font class="contenttxtb">BREAK – 跳過所有迴圈離開 FOR … NEXT 迴圈</font>
+							<br>　　FOR TU.LOOP.CNT = 1 TO 100
+							<br>　　　　須執行的程式區段
+							<br>　　NEXT
+							<br>3.	LOOP … WHILE … REPEAT clause － 重覆執行區塊
+							<br>　　Loop
+							<br>　　　　TU.LOOP.CNT = TU.LOOP.CNT + 1
+							<br>　　WHILE (TU.LOOP.CNT LT 100)
+							<br>　　　　須執行的程式區段
+							<br>　　REPEAT
+							<br>4.	BEGIN CASE … CASE … END clause － 條件式選擇區塊
+							<br>　　BEGIN CASE
+							<br>　　CASE TU.CUST.NAME EQ 'ABC' 
+							<br>　　　　符合條件的程式區塊
+							<br>　　CASE TU.CUST.NAME EQ 'DEF' 
+							<br>　　　　符合條件的程式區塊
+							<br>　　CASE 1 – 除以上條件的其他都會符合的條件式
+							<br>　　　　符合條件的程式區塊
+							<br>　　END CASE
+							<br>5.	GOSUB … RETURN clause － 執行共用區塊
+							<br>　　　　GOSUB XXXX(Section Name)
+							<br>　　XXXX:
+							<br>　　　　RETURN
+					</td></tr></table>
+				</td></tr>
+				<Tr valign="top" class="contenttxt">
+					<Td><li class="headertxt2">常用指令</li></Td>
+				</Tr>
+				<tr valign="top">
+					<td><Table class="contenttxt">
+						<Tr><Td width="100"></Td><Td width="700"></Td></Tr>
+						<Tr><Td></Td><Td>
+							<br>1.	字串指令
+							<br>　　TU.DATA = '1234567890' 
+							<br>　　TU.DATA[1,2] -&gt; '12' 
+							<br>　　TU.DATA[3,4] -&gt; '3456' 
+							<br>2.	字串連結指令 <font class="headertxt2r">:</font>
+							<br>　　TU.DATA1 = 'ABC' 
+							<br>　　TU.DATA2 = 'DEF' 
+							<br>　　TU.DATA1 : TU.DATA2 -&gt; 'ABCDEF' 
+							<br>3.	<font class="contenttxtb">@FM、FM、@VM、VM、@SM、SM</font>
+							<br>　　@FM = FM = 欄位分隔字元
+							<br>　　@VM = VM = Multi-Value 分隔字元
+							<br>　　@SM = SM = Sub-Value 分隔字元
+							<br>
+							<br>　　若 TU.DATA = 'ABC' :@FM:'DEF' :@FM:'GHI' 
+							<br>　　則 TU.DATA&lt;1&gt; -&gt; 'ABC' ，  TU.DATA&lt;3&gt; = 'GHI' 
+							<br>
+							<br>　　若 TU.DATA = 'ABC' :@VM:'A1' :@FM:'DEF' :@VM:'D1' :@FM:'GHI' :@VM:'G1' 
+							<br>　　則 TU.DATA&lt;1,1&gt; -&gt; 'ABC'   TU.DATA&lt;1,2&gt; = 'A1' 
+							<br>　　則 TU.DATA&lt;2,1&gt; -&gt; 'DEF'   TU.DATA&lt;2,2&gt; = 'D1' 
+							<br>
+							<br>　　若 TU.DATA = 'ABC' :@SM:'AS1' :@VM:'DEF' :@SM:'DS1' :@FM:'GHI' 
+							<br>　　則 TU.DATA&lt;1,1,1&gt; -&gt; 'ABC'   TU.DATA&lt;1,1,2&gt; = 'AS1' 
+							<br>　　則 TU.DATA&lt;1,2,1&gt; -&gt; 'DEF'   TU.DATA&lt;1,2,2&gt; = 'DS1' 
+							<br>　　則 TU.DATA&lt;2,1&gt; -&gt; 'GHI'   TU.DATA&lt;2,2&gt; = '' 
+							<br>
+							<br>4.	ABS － 取得絕對值
+							<br>　　TU.POS.VALUE = ABS(10-15)
+							<br>5.	CALL － 呼叫其他 SUBROUTINE
+							<br>　　CALL OTHER.SUB()
+							<br>　　CALL OTHER.SUB(PARAM1,PARAM2)
+							<br>6.	<font class="contenttxtb">CHANGE、CONVERT－ 取代字串中的值</font>
+							<br>　　CHANGE 原始值 TO 目標值 IN 資料變數
+							<br>　　CONVERT 原始值 TO 目標值 IN 資料變數
+							<br>　　TU.BEF = 'ABCDEF' 
+							<br>　　CHANGE 'F' TO 'H' IN TU.BEF
+							<br>　　'ABCDEF'  -&gt; 'ABCDEH'
+							<br>7.	<font class="contenttxtb">OPENSEQ 、 CREATE 、 CLOSESEQ、WRITESEQ、READSEQ</font>
+							<br>　　OPENSEQ 目錄名稱,檔案名稱 TO 檔案指標 THEN/ELSE … END (開啟文字檔)
+							<br>　　CREATE 檔案指標 THEN/ELSE … END (建立文字檔)
+							<br>　　CLOSESEQ 檔案指標 (關閉文字檔)
+							<br>　　WRITESEQ 資料名稱 TO 檔案指標 ELSE … END (寫入文字檔)
+							<br>　　READSEQ 資料名稱 FROM 檔案指標 ELSE … END (讀取文字檔)
+							<br>
+							<br>　　OPENSEQ 'DIRFILE', 'RECORD' TO FILE ELSE
+							<br>　　　　CREATE FILE ELSE ABORT 
+							<br>　　END
+							<br>　　WRITESEQ 'SOME DATA' TO FILE ELSE STOP
+							<br>　　CLOSESEQ FILE
+							<br>8.	<font class="contenttxtb">OPF、F.READ、F.WRITE</font>
+							<br>　　CALL OPF(檔案名稱,檔案指標) － 開啟系統檔案
+							<br>　　CALL F.READ(檔案名稱,檔案鍵值,資料變數,檔案指標,錯誤代碼) － 讀取系統檔案
+							<br>　　CALL F.WRITE(檔案名稱, 檔案鍵值,資料變數) － 寫入系統檔案
+							<br>9.	COUNT(資料變數,計數變數) － 計算計數變數在資料變數中出現的次數
+							<br>　　TU.DATA = 'ABCDEF/1234/ABCD' 
+							<br>　　COUNT(TU.DATA,' /' ) = 2
+							<br>10.	<font class="contenttxtb">DCOUNT(資料變數,計數變數) – 計算以計數變數當分隔在資料變數中所有的資料數目</font>
+							<br>　　TU.DATA = 'ABCDEF/1234/ABCD' 
+							<br>　　DCOUNT(TU.DATA,' /' ) = 3
+							<br>11.	<font class="contenttxtb">FIELD(資料變數,分隔變數,起始位置,資料長度) – 依分隔字元取得資料變數部份資料，資料長度預設為1</font>
+							<br>　　TU.DATA = 'ABCDEF/1234/ABCD' 
+							<br>　　FIELD(TU.DATA,'/' ,2) = '1234' 
+							<br>　　FIELD(TU.DATA,'/' ,2,2) = '1234/ABCD' 
+							<br>12.	<font class="contenttxtb">DEBUG – 開啟Debug 模式</font>
+							<br>　　IF TU.NAME EQ 'ABC'  THEN
+							<br>　　　　DEBUG － 當程式執行至此指令將會進入 Debug 模式供除錯之用
+							<br>　　　　… 符合條件須執行的程式碼
+							<br>　　END
+							<br>13.	DEL 資料變數&lt;FM位置,VM位置,SM位置&gt; - 刪除Multi-Value變數中的部份資料
+							<br>　　TU.DATA = 'ABC' :@FM:'DEF' :@FM:'GHI' 
+							<br>　　DEL TU.DATA&lt;2&gt;
+							<br>　　TU.DATA -&gt; 'ABC':@FM:'GHI'
+							<br>14.	DIM – 宣告陣列變數
+							<br>　　DIM TU.DATA(500) -&gt; 宣告 TU.DATA為一維陣列，指標為 1~500
+							<br>15.	LOWCASE、UPCASE – 將字串轉成小寫/大寫字元
+							<br>　　TU.DATA = 'AbcdEFG' 
+							<br>　　LOWCASE(TU.DATA) -&gt; 'abcdefg' 
+							<br>　　UPCASE(TU.DATA) -&gt; 'ABCDEFG' 
+							<br>16.	<font class="contenttxtb">EXECUTE shell指令 CAPTURING 過程資料變數 SETTING 結果變數 </font>
+							<br>　　呼叫系統執行shell指令並將過程資料及結果紀錄於變數中
+							<br>　　EXECUTE 'dir' CAPTURING TU.LOG SETTING TU.RESULT
+							<br>　　系統將執行 dir 命令並將資料存放於 TU.LOG 結果存放於 TU.RESULT中
+							<br>17.	FIND 目標 IN 資料變數 SETTING 位置變數 THEN/ELSE ... END
+							<br>　　搜尋資料變數中與目標完全相同的位置
+							<br>　　Var = "ABC":@VM:"JAC":@FM:"CDE":@VM:"WHO"
+							<br>　　FIND "JAC" IN Var SETTING Ap, Vp THEN
+							<br>　　　　CRT "JAC is in Field ": Ap :", value ": Vp
+							<br>　　　　* Ap = 1 Vp = 2
+							<br>　　END ELSE
+							<br>　　　　CRT "JAC could not be found"
+							<br>　　END
+							<br>18. FINDSTR 目標 IN 資料變數 SETTING 位置變數 THEN/ELSE ... END
+							<br>　　搜尋資料變數中含有目標值的資料位置
+							<br>　　Var = "ABC":@VM:"OJACKO":@FM:"CDE":@VM:"WHO"
+							<br>　　FINDSTR "JAC" IN Var SETTING Ap, Vp THEN
+							<br>　　　　CRT "JAC is within Field ": Ap :", value ": Vp
+							<br>　　　　* Ap = 1 Vp = 2
+							<br>　　END ELSE
+							<br>　　　　CRT "JAC could not be found"
+							<br>　　END
+							<br>19. <font class="contenttxtb">LOCATE 目標 IN 資料變數 SETTING 位置變數 BY 搜尋參數 THEN/ELSE ... END</font>
+							<br>　　此指令與 FIND 類似。
+							<br>　　AL - Values are in ascending alphanumeric order
+							<br>　　AR - Values are in right justified, then ascending order
+							<br>　　AN - Values are in ascending numeric order
+							<br>　　DL - Values are in descending alphanumeric order
+							<br>　　DR - Values are in right justified, then descending order
+							<br>　　DN - Values are in descending numeric order
+							<br>20. <font class="contenttxtb">FORMAT(資料變數,格式變數)</font>
+							<br>　　將資料依格式設定變數中的參數將資料變數格式化
+							<br>　　V = FORMAT(X, "R2#10") - 1234.56 - 1234.56
+							<br>　　V = FORMAT(X, "L2%10") - 1234.56 - 1234.56000
+							<br>　　V = FORMAT(X, "R2%10") - 1234.56 - 0001234.56
+							<br>　　V = FORMAT(X, "L2*10") - 1234.56 - 12.34*****
+							<br>　　V = FORMAT(X, "R2*10") - 1234.56 - *****12.34
+							<br>21. <font class="contenttxtb">INDEX(資料變數,搜尋變數,出現次數)</font>
+							<br>　　回傳搜尋變數在資料變數中出現的位置
+							<br>　　若找不到該搜尋變數則回傳 <font class="contenttxtb">0</font>
+							<br>　　ABet = "abcdefghijklmnopqrstuvwxyzabc"
+							<br>　　CRT INDEX(ABet, "a", 1) =&gt; 1
+							<br>　　CRT INDEX(ABet, "a", 2) =&gt; 27
+							<br>　　CRT INDEX(ABet, "jkl", 1) =&gt; 10
+							<br>22. INSERT 資料變數 BEFORE 儲存變數 &lt;x,y,z&gt;
+							<br>　　將資料依 x,y,z 參數插入儲存變數中
+							<br>　　FOR I = 2 TO 12
+							<br>　　　　INS I*7 BEFORE Values&lt;7,i&gt;
+							<br>　　NEXT I
+							<br>23. INT(資料變數) - 將數值資料轉成整數值
+							<br>24. ISALPHA(資料變數) - 判斷資料是否為文字
+							<br>25. ISALNUM(資料變數) - 判斷資料是否為文字/數字
+							<br>25. ISDIGIT(資料變數) - 判斷資料是否為數字
+							<br>26. LEN(資料變數) - 取得變數資料長度
+							<br>27. <font class="contenttxtb">MOD(被除數,除數) - 取得除法運算餘數</font>
+							<br>28. LEFT(資料變數,長度) RIGHT(資料變數,長度)
+							<br>　　依取得變數中由左/右開始長度得資料
+							<br>29. RND(種子變數) - 依種子取得適當亂數
+							<br>30. SLEEP 時間變數  - 依時間變數使系統暫停
+							<br>31. SORT(資料變數) - 將資料變數所有值依降冪排序
+							<br>32. SPACE(長度) - 空白字元
+							<br>33. TRIM(變數) - 將變數中前後的空白字元清除
+							<br>34. <font class="contenttxtb">CALL REM</font> - 將 <font class="contenttxtb">TEXT</font> 變數中的資料顯於畫面上。
+							<br>35. <font class="contenttxtb">CALL ERR</font> - 將 <font class="contenttxtb">E</font> 變數中<font class="contenttxtb">錯誤訊息</font>送出至使用者端。
+							<br>36. <font class="contenttxtb">CALL EB.READLIST(SEL.CMD,SEL.LIST,'',SEL.CNT,SEL.ERR)</font> - 執行 <font class="contenttxtb">SEL.CMD</font> 變數中<font class="contenttxtb">jQL command</font>。
+							<br>　　並將符合條件的 <font class="contenttxtb">@ID</font> 放入 SEL.LIST 變數中。
+							<br>37. <font class="contenttxtb">CALL GET.LOC.REF(APP_NAME,FIELD_NAME,FIELD_POS)</font> - 取得<font class="contenttxtb">APP_NAME</font> 變數中<font class="contenttxtb">Application Name</font>。
+							<br>　　並找到 <font class="contenttxtb">FIELD_NAME</font> 中的 LOCAL REF 欄位名稱，將該欄位的位置存放於 <font class="contenttxtr">FIELD_POS</font>。
+					</td></tr></table>
+				</td></tr>
+				<Tr valign="top" class="contenttxt"><Td><li class="headertxt2r">程式範例說明</li></Td></Tr>
+				<tr><td><table class="contenttxt">
+					<tr><td width="100"></td><td><a href="./train_j4_file_op.html">J4 File Operation Example</a></td></tr>
+					<tr><td width="100"></td><td><a href="./train_seq_file_op.html">Sequential File Operation Example</a></td></tr>
+				</table></td></tr>
+			</table>			
+		</Td></Tr>
+	</Table>
+	<Table align="center" width="800">
+		<Tr>
+			<Td><img src="./img/s-line.gif" width="800" height="1"></img></Td>
+		</Tr>
+	</Table>
+	<p></p>
+	<Table width="800" align="center">
+		<Tr>
+			
+		</Tr>
+	</Table>
+</body>
+</html>
